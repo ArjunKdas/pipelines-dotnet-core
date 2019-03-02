@@ -20,3 +20,7 @@ steps:
     testResultsFiles: '**/*.trx'
 
 - task: PublishBuildArtifacts@1
+  inputs:
+    azureSubscription: 'DemoAzure'
+    WebAppName: 'demoappazure'
+    Package: $(System.ArtifactsDirectory)/**/*.zip
